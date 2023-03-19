@@ -5,12 +5,18 @@ import router from './router'
 import { BootstrapVue, IconsPlugin } from 'bootstrap-vue'
 import 'bootstrap/dist/css/bootstrap.css'
 import 'bootstrap-vue/dist/bootstrap-vue.css'
+import api from './api.js'
+import vueCookies from "vue-cookies";
 
 Vue.use(VueRouter);
-Vue.use(BootstrapVue)
-Vue.use(IconsPlugin)
+Vue.use(BootstrapVue);
+Vue.use(IconsPlugin);
+Vue.use(vueCookies);
 
 Vue.config.productionTip = false
+
+Vue.prototype.$http = api;
+
 
 new Vue({
   router,

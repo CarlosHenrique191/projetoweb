@@ -2,12 +2,13 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import HomeView from '../views/HomeView.vue';
 import CadastroEsportes from '../views/CadastroEsportes.vue';
+import Login from '../views/Login.vue';
 
 Vue.use(VueRouter);
 
 const routes = [
   {
-    path: '/',
+    path: '/Home',
     name: 'home',
     component: HomeView,
   },
@@ -15,6 +16,12 @@ const routes = [
     path: '/CadastroEsportes',
     name: 'cadastrarEsportes',
     component: CadastroEsportes,
+  },
+  {
+    path: '/',
+    name: 'login',
+    component: Login,
+    //meta: {notRenderMenu: true},
   },
 ];
 
